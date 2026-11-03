@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Against the Dream</title>
+<meta name="description" content="The outer gods did not conquer the world. They fell asleep across it. A turn-based roguelike, in development.">
+<meta name="theme-color" content="#1c1f24">
+<link rel="canonical" href="https://againstthedream.com/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://againstthedream.com/">
+<meta property="og:title" content="Against the Dream">
+<meta property="og:description" content="The outer gods did not conquer the world. They fell asleep across it. A turn-based roguelike, in development.">
+<meta property="og:image" content="https://againstthedream.com/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="A city of canals seen from above at night, its windows lit, ringed by fog.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preload" href="fonts/literata.woff" as="font" type="font/woff" crossorigin>
+<style>
+  @font-face {
+    font-family: "Literata";
+    src: url("fonts/literata.woff") format("woff");
+    font-weight: 200 900;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "Literata";
+    src: url("fonts/literata-italic.woff") format("woff");
+    font-weight: 200 900;
+    font-style: italic;
+    font-display: swap;
+  }
+
+  :root {
+    --bg: #1c1f24;
+    --ink: #ece6da;
+    --ink-soft: #c9c3b8;
+    --ink-faint: #9aa0a8;
+  }
+
+  html, body { margin: 0; background: var(--bg); color: var(--ink); }
+  body {
+    font-family: "Literata", Georgia, "Times New Roman", serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  main {
+    position: relative;
+    min-height: 100vh;
+    min-height: 100svh;
+    display: grid;
+    overflow: hidden;
+  }
+
+  .scene { position: absolute; inset: 0; margin: 0; }
+  .scene img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 42%;
+  }
+  .scene::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(to bottom, rgb(28 31 36 / 0) 38%, rgb(28 31 36 / .78) 74%, var(--bg) 100%),
+      radial-gradient(ellipse at 50% 42%, rgb(0 0 0 / 0) 50%, rgb(16 18 22 / .5) 100%);
+  }
+
+  .words {
+    position: relative;
+    align-self: end;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 64rem;
+    margin: 0 auto;
+    padding: 0 16px clamp(48px, 10vh, 112px);
+    text-align: center;
+    text-shadow: 0 1px 14px rgb(0 0 0 / .55);
+  }
+
+  h1 {
+    margin: 0 0 .45em;
+    font-size: clamp(2.5rem, 7.5vw, 5.75rem);
+    font-weight: 500;
+    line-height: 1.02;
+    letter-spacing: .005em;
+    text-wrap: balance;
+  }
+
+  .hook {
+    margin: 0 0 1.7em;
+    font-size: clamp(1.05rem, 2.2vw, 1.4rem);
+    font-style: italic;
+    line-height: 1.5;
+    color: var(--ink-soft);
+  }
+  .hook span { display: inline-block; }
+
+  .what {
+    margin: 0;
+    font-size: .8rem;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+  }
+  @media (max-width: 30rem) {
+    .what span { display: block; }
+    .what .sep { display: none; }
+  }
+</style>
+</head>
+<body>
+<main>
+  <figure class="scene">
+    <img
+      src="img/city-1920.jpg"
+      srcset="img/city-1280.jpg 1280w, img/city-1920.jpg 1920w"
+      sizes="(max-aspect-ratio: 16/9) 178vh, 100vw"
+      width="1920" height="1080"
+      alt="A city of canals seen from above at night, its windows lit, ringed by fog."
+      fetchpriority="high">
+  </figure>
+  <header class="words">
+    <h1>Against the Dream</h1>
+    <p class="hook"><span>The outer gods did not conquer the world.</span> <span>They fell asleep across it.</span></p>
+    <p class="what"><span>A turn-based roguelike</span><span class="sep"> &middot; </span><span>in development</span></p>
+  </header>
+</main>
+</body>
+</html>
